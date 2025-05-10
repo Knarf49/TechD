@@ -23,9 +23,9 @@ export default function AddToCartButton({ id, title, price,thumbnail }: Props) {
   
     const handleClick = () => {
         if (!isSignedIn) {
-            // return เป็น alert ตรงๆไม่ได้ เพราะ onClick ไม่สามารถ render jsx ตรงๆได้
-            setShowAlert(true)
-            return
+          // return เป็น alert ตรงๆไม่ได้ เพราะ onClick ไม่สามารถ render jsx ตรงๆได้
+          setShowAlert(true)
+          return
         }
 
         addToCart({
@@ -42,7 +42,7 @@ export default function AddToCartButton({ id, title, price,thumbnail }: Props) {
     useEffect(() => {
         if (showAlert) {
         const timeout = setTimeout(() => {
-            setShowAlert(false)
+          setShowAlert(false)
         }, 3000)
         return () => clearTimeout(timeout)
         }
