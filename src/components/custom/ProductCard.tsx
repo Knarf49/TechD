@@ -18,7 +18,7 @@ const ProductCard = ({ id,title,description,rating,price,thumbnail }:ProductType
             <CardHeader className="bg-secondary rounded-(--radius)">
                 <div className="h-48 content-center">
                     <Image
-                        src={thumbnail}
+                        src={thumbnail ?? '/placeholder-img.png'}
                         alt={title}
                         width={100}
                         height={150}
