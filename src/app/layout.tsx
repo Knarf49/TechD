@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import { ProductProvider } from "./context/ProductContext";
 import { ClerkProvider } from '@clerk/nextjs'
+import { Analytics } from '@vercel/analytics/next';
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default async function RootLayout({
               {children}
             </section> 
             <Footer />
+            <Analytics />
           </body>
         </ProductProvider>
       </html>
