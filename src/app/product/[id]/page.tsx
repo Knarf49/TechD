@@ -16,7 +16,7 @@ export default async function Page({
 }: {
   params: ProductPageProps
 }) {
-  const { id } = await params
+  const { id } = params
   const res = await fetch(`https://dummyjson.com/products/${id}`)
   if (!res.ok) return notFound()
   const product = await res.json()
