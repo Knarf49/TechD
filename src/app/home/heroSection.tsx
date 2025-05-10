@@ -8,7 +8,6 @@ import {
   CarouselApi
 } from "@/components/ui/carousel"
 import { ArrowRight } from "lucide-react";
-import { Outfit } from "next/font/google";
 import Image from "next/image";
 import { useEffect,useState } from "react";
 

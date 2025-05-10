@@ -4,7 +4,6 @@ import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import {
   Card,
-  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
