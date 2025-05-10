@@ -7,14 +7,12 @@ import ProductImageGallery from "@/components/custom/ProductImageGallery"
 import FeaturesSection from "@/components/custom/FeaturesSection"
 import AddToCartButton from "@/components/custom/AddToCartButton"
 
-type ProductPageProps = {
-  params: {
-    id: string
-  }
-}
-
-export default async function Page({ params }: ProductPageProps) {
-  const { id } = params
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}) {
+  const { id } = await params
   const res = await fetch(`https://dummyjson.com/products/${id}`)
   if (!res.ok) return notFound()
   const product = await res.json()
