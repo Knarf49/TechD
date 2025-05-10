@@ -8,14 +8,12 @@ import FeaturesSection from "@/components/custom/FeaturesSection"
 import AddToCartButton from "@/components/custom/AddToCartButton"
 
 type ProductPageProps = {
-  id:string
+  params: {
+    id: string
+  }
 }
 
-export default async function Page({
-  params,
-}: {
-  params: ProductPageProps
-}) {
+export default async function Page({ params }: ProductPageProps) {
   const { id } = params
   const res = await fetch(`https://dummyjson.com/products/${id}`)
   if (!res.ok) return notFound()
